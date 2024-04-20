@@ -1,24 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class Student
+
+
+//Abstraction: Person class is an abstract class with common properties and an abstract method DisplayInformation(),
+//which each subclass must implement.
+abstract class Person
 {
-    // Attributes
-    public int StudentID { get; set; }
+    public int ID { get; set; }
     public string Name { get; set; }
     public int Age { get; set; }
-    public List<string> CoursesEnrolled { get; set; }
 
-    // Constructor
-    public Student(int studentID, string name, int age)
+    public Person(int id, string name, int age)
     {
-        StudentID = studentID;
+        ID = id;
         Name = name;
         Age = age;
+    }
+
+    public abstract void DisplayInformation();
+}
+
+// Concrete class Student
+class Student : Person
+{
+    public List<string> CoursesEnrolled { get; set; }
+
+    public Student(int studentID, string name, int age)
+        : base(studentID, name, age)
+    {
         CoursesEnrolled = new List<string>();
     }
 
-    // Methods
     public void EnrollCourse(string course)
     {
         CoursesEnrolled.Add(course);
@@ -29,9 +42,9 @@ class Student
         CoursesEnrolled.Remove(course);
     }
 
-    public void DisplayInformation()
+    public override void DisplayInformation()
     {
-        Console.WriteLine($"Student ID: {StudentID}");
+        Console.WriteLine($"Student ID: {ID}");
         Console.WriteLine($"Name: {Name}");
         Console.WriteLine($"Age: {Age}");
         Console.WriteLine("Courses Enrolled:");
@@ -42,6 +55,39 @@ class Student
     }
 }
 
+// Concrete class Instructor
+class Instructor : Person
+{
+    public List<Class> ClassesTaught { get; set; }
+
+    public Instructor(int instructorID, string name, int age)
+        : base(instructorID, name, age)
+    {
+        ClassesTaught = new List<Class>();
+    }
+
+    public void AddClass(Class classObj)
+    {
+        ClassesTaught.Add(classObj);
+    }
+
+    public void RemoveClass(Class classObj)
+    {
+        ClassesTaught.Remove(classObj);
+    }
+
+    public override void DisplayInformation()
+    {
+        Console.WriteLine($"Instructor ID: {ID}");
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Age: {Age}");
+        Console.WriteLine("Classes Taught:");
+        foreach (var classObj in ClassesTaught)
+        {
+            Console.WriteLine($"- {classObj.Name} (ID: {classObj.ClassID})");
+        }
+    }
+}
 // Class Class
 class Class
 {
@@ -81,7 +127,7 @@ class Class
         Console.WriteLine("Students:");
         foreach (var student in Students)
         {
-            Console.WriteLine($"{student.StudentID}: {student.Name}");
+            Console.WriteLine($"{student.ID}: {student.Name}");
         }
     }
 }
@@ -124,44 +170,6 @@ class Department
     }
 }
 
-// Instructor Class
-class Instructor
-{
-    // Attributes
-    public int InstructorID { get; set; }
-    public string Name { get; set; }
-    public List<Class> ClassesTaught { get; set; }
-
-    // Constructor
-    public Instructor(int instructorID, string name)
-    {
-        InstructorID = instructorID;
-        Name = name;
-        ClassesTaught = new List<Class>();
-    }
-
-    // Methods
-    public void AddClass(Class classObj)
-    {
-        ClassesTaught.Add(classObj);
-    }
-
-    public void RemoveClass(Class classObj)
-    {
-        ClassesTaught.Remove(classObj);
-    }
-
-    public void DisplayInformation()
-    {
-        Console.WriteLine($"Instructor ID: {InstructorID}");
-        Console.WriteLine($"Name: {Name}");
-        Console.WriteLine("Classes Taught:");
-        foreach (var classObj in ClassesTaught)
-        {
-            Console.WriteLine($"- {classObj.Name} (ID: {classObj.ClassID})");
-        }
-    }
-}
 
 class Course
 {
@@ -181,12 +189,37 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        // Polymorphism: Using the abstract class Person, we create a list of people (List<Person>) and add Student
+        // and Instructor objects to it. We then demonstrate polymorphism by calling the
+        // DisplayInformation() method on each object in the list, where the method behaves differently depending on the object's class.
+
+
+
+        List<Person> people = new List<Person>();
+
+        // Create instances of Student and Instructor
+        Student alice = new Student(1, "Alice", 20);
+        Student bob = new Student(2, "Bob", 21);
+        Instructor john = new Instructor(3, "John", 45);
+
+        // Add them to the people list
+        people.Add(alice);
+        people.Add(bob);
+        people.Add(john);
+
+        // Display information for each person in the list
+        foreach (var person in people)
+        {
+            person.DisplayInformation();
+            Console.WriteLine();
+        }
+
         // Example usage
         Department csDepartment = new Department(1, "Computer Science");
         Course cs101 = new Course(101, "Introduction to Computer Science", csDepartment);
         Class cs101Class = new Class(1, "CS101", "John Doe", "Computer Science", cs101);
-        Student alice = new Student(1, "Alice", 20);
-        Student bob = new Student(2, "Bob", 21);
+        
 
         cs101Class.AddStudent(alice);
         cs101Class.AddStudent(bob);
@@ -202,4 +235,4 @@ class Program
         bob.DisplayInformation();
     }
 }
-//Part 2 Advanced System Design:
+
