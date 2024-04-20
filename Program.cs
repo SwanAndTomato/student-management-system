@@ -176,6 +176,7 @@ class Course
         Department = department;
     }
 }
+//Demonstration of Part 1 for testing purposes.
 class Program
 {
     static void Main(string[] args)
