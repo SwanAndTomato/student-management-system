@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StudentManagementSystem;
-
-// Part 1 Basic System Design
 class Student
 {
     // Attributes
@@ -48,26 +45,22 @@ class Student
 // Class Class
 class Class
 {
-    // Attributes
-    public int ClassID { get; set; }
+    public int ClassID { get; }
     public string Name { get; set; }
     public string Instructor { get; set; }
     public string Department { get; set; }
-    public string Course { get; set; }
-    public List<Student> Students { get; set; }
+    public Course Course { get; set; }
+    public List<Student> Students { get; } = new List<Student>();
 
-    // Constructor
-    public Class(int classID, string name, string instructor, string department, string course)
+    public Class(int classID, string name, string instructor, string department, Course course)
     {
         ClassID = classID;
         Name = name;
         Instructor = instructor;
         Department = department;
         Course = course;
-        Students = new List<Student>();
     }
 
-    // Methods
     public void AddStudent(Student student)
     {
         Students.Add(student);
@@ -84,15 +77,14 @@ class Class
         Console.WriteLine($"Name: {Name}");
         Console.WriteLine($"Instructor: {Instructor}");
         Console.WriteLine($"Department: {Department}");
-        Console.WriteLine($"Course: {Course}");
+        Console.WriteLine($"Course: {Course.CourseID} - {Course.Name}");
         Console.WriteLine("Students:");
         foreach (var student in Students)
         {
-            Console.WriteLine($"- {student.Name} (ID: {student.StudentID})");
+            Console.WriteLine($"{student.StudentID}: {student.Name}");
         }
     }
 }
-
 // Department Class
 class Department
 {
@@ -170,3 +162,43 @@ class Instructor
         }
     }
 }
+
+class Course
+{
+    public int CourseID { get; }
+    public string Name { get; set; }
+    public Department Department { get; set; }
+
+    public Course(int courseID, string name, Department department)
+    {
+        CourseID = courseID;
+        Name = name;
+        Department = department;
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Example usage
+        Department csDepartment = new Department(1, "Computer Science");
+        Course cs101 = new Course(101, "Introduction to Computer Science", csDepartment);
+        Class cs101Class = new Class(1, "CS101", "John Doe", "Computer Science", cs101);
+        Student alice = new Student(1, "Alice", 20);
+        Student bob = new Student(2, "Bob", 21);
+
+        cs101Class.AddStudent(alice);
+        cs101Class.AddStudent(bob);
+
+        csDepartment.AddClass(cs101Class);
+
+        csDepartment.DisplayInformation();
+        Console.WriteLine();
+        cs101Class.DisplayInformation();
+        Console.WriteLine();
+        alice.DisplayInformation();
+        Console.WriteLine();
+        bob.DisplayInformation();
+    }
+}
+//Part 2 Advanced System Design:
