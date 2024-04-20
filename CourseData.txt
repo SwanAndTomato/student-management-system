@@ -1,0 +1,19 @@
+101,Introduction to Computer Science,Computer Science
+102,Data Structures and Algorithms,Computer Science
+103,Database Management Systems,Computer Science
+104,Software Engineering,Computer Science
+105,Artificial Intelligence,Computer Science
+201,Calculus,Mathematics
+202,Linear Algebra,Mathematics
+203,Discrete Mathematics,Mathematics
+204,Statistics,Mathematics
+301,Introduction to Physics,Physics
+302,Classical Mechanics,Physics
+303,Electromagnetism,Physics
+304,Quantum Mechanics,Physics
+401,Introduction to Biology,Biology
+402,Genetics,Biology
+403,Cell Biology,Biology
+404,Ecology,Biology
+501,Introduction to Psychology,Psychology
+502,Social Psychology,Psychology

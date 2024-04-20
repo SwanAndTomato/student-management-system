@@ -1,0 +1,20 @@
+1,Computer Science,Introduction to Computer Science,Data Structures and Algorithms,Database Management Systems,Software Engineering,Artificial Intelligence
+2,Mathematics,Calculus,Linear Algebra,Discrete Mathematics,Statistics
+3,Physics,Introduction to Physics,Classical Mechanics,Electromagnetism,Quantum Mechanics
+4,Biology,Introduction to Biology,Genetics,Cell Biology,Ecology
+5,Psychology,Introduction to Psychology,Social Psychology,Advanced Psychology
+6,Chemistry,General Chemistry,Organic Chemistry,Physical Chemistry,Analytical Chemistry
+7,Engineering,Introduction to Engineering,Mechanical Engineering,Electrical Engineering,Civil Engineering
+8,History,World History,American History,Ancient History,European History
+9,English,Literature,Writing Composition,Shakespearean Studies,Linguistics
+10,Art,Art History,Painting,Sculpture,Photography
+11,Economics,Macroeconomics,Microeconomics,International Economics,Development Economics
+12,Geology,Physical Geology,Mineralogy,Petrology,Geophysics
+13,Sociology,Introduction to Sociology,Social Theory,Gender Studies,Cultural Sociology
+14,Political Science,Introduction to Political Science,Comparative Politics,International Relations,Public Administration
+15,Anthropology,Introduction to Anthropology,Cultural Anthropology,Physical Anthropology,Archaeology
+16,Music,Music Theory,Music History,Music Composition,Music Performance
+17,Philosophy,Introduction to Philosophy,Logic,Epistemology,Ethics
+18,Environmental Science,Environmental Biology,Environmental Chemistry,Environmental Policy,Conservation Biology
+19,Business Administration,Introduction to Business,Marketing,Finance,Management
+20,Nursing,Anatomy and Physiology,Pharmacology,Nursing Ethics,Nursing Leadership

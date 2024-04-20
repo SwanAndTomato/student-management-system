@@ -1,0 +1,20 @@
+1,Introduction to Computer Science,Dr. Smith,Computer Science,Introduction to Computer Science
+2,Data Structures and Algorithms,Prof. Johnson,Computer Science,Data Structures and Algorithms
+3,Database Management Systems,Dr. Williams,Computer Science,Database Management Systems
+4,Software Engineering,Prof. Brown,Computer Science,Software Engineering
+5,Artificial Intelligence,Dr. Davis,Computer Science,Artificial Intelligence
+6,Calculus,Prof. Martinez,Mathematics,Calculus
+7,Linear Algebra,Dr. Wilson,Mathematics,Linear Algebra
+8,Discrete Mathematics,Prof. Anderson,Mathematics,Discrete Mathematics
+9,Statistics,Dr. Taylor,Mathematics,Statistics
+10,Introduction to Physics,Prof. Garcia,Physics,Introduction to Physics
+11,Classical Mechanics,Dr. Hernandez,Physics,Classical Mechanics
+12,Electromagnetism,Prof. Nguyen,Physics,Electromagnetism
+13,Quantum Mechanics,Dr. Patel,Physics,Quantum Mechanics
+14,Introduction to Biology,Prof. Thomas,Biology,Introduction to Biology
+15,Genetics,Dr. Lee,Biology,Genetics
+16,Cell Biology,Prof. Kim,Biology,Cell Biology
+17,Ecology,Dr. White,Biology,Ecology
+18,Introduction to Psychology,Prof. Harris,Psychology,Introduction to Psychology
+19,Social Psychology,Dr. Martin,Psychology,Social Psychology
+20,Advanced Psychology,Prof. King,Psychology,Introduction to Psychology

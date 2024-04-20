@@ -1,0 +1,20 @@
+1001,John Smith,20,Introduction to Computer Science,Database Management Systems
+1002,Alice Johnson,22,Introduction to Computer Science,Artificial Intelligence
+1003,Michael Brown,21,Introduction to Computer Science,Data Structures and Algorithms
+1004,Emily Wilson,23,Introduction to Computer Science,Software Engineering
+1005,James Davis,20,Calculus,Linear Algebra
+1006,Sarah Martinez,22,Calculus,Discrete Mathematics
+1007,David Anderson,21,Calculus,Statistics
+1008,Jessica Taylor,23,Calculus,Linear Algebra
+1009,Ryan Garcia,20,Introduction to Physics,Classical Mechanics
+1010,Olivia Martinez,22,Introduction to Physics,Electromagnetism
+1011,Daniel Hernandez,21,Introduction to Physics,Quantum Mechanics
+1012,Emma Nguyen,23,Introduction to Physics,Classical Mechanics
+1013,Matthew Patel,20,Introduction to Biology,Genetics
+1014,Sophia Thomas,22,Introduction to Biology,Cell Biology
+1015,Andrew Lee,21,Introduction to Biology,Ecology
+1016,Chloe Kim,23,Introduction to Biology,Genetics
+1017,William White,20,Introduction to Psychology,Social Psychology
+1018,Isabella Harris,22,Introduction to Psychology,Social Psychology
+1019,Ethan Martin,21,Introduction to Psychology,Social Psychology
+1020,Ava King,23,Introduction to Psychology,Social Psychology
